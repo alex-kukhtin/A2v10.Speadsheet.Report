@@ -10,18 +10,19 @@ using DocumentFormat.OpenXml.Spreadsheet;
 
 using A2v10.Data.Interfaces;
 using A2v10.Data;
-using A2v10.Xaml.Speradsheet;
+using A2v10.Xaml.Spreadsheet;
 using System.Globalization;
 using System.Linq;
+using System.Xaml;
 
-namespace A2v10.Speadsheet.Report;
+namespace A2v10.Spreadsheet.Report;
 
-using RepWorkbook = A2v10.Xaml.Speradsheet.Workbook;
-using RepSheet = A2v10.Xaml.Speradsheet.Sheet;
-using RepRow = A2v10.Xaml.Speradsheet.Row;
-using RepCell = A2v10.Xaml.Speradsheet.Cell;
-using RepColumn = A2v10.Xaml.Speradsheet.Column;
-using DataType = A2v10.Xaml.Speradsheet.DataType;
+using RepWorkbook = A2v10.Xaml.Spreadsheet.Workbook;
+using RepSheet = A2v10.Xaml.Spreadsheet.Sheet;
+using RepRow = A2v10.Xaml.Spreadsheet.Row;
+using RepCell = A2v10.Xaml.Spreadsheet.Cell;
+using RepColumn = A2v10.Xaml.Spreadsheet.Column;
+using DataType = A2v10.Xaml.Spreadsheet.DataType;
 
 using Cell = DocumentFormat.OpenXml.Spreadsheet.Cell;
 using Row = DocumentFormat.OpenXml.Spreadsheet.Row;
@@ -29,8 +30,15 @@ using Workbook = DocumentFormat.OpenXml.Spreadsheet.Workbook;
 using Sheet = DocumentFormat.OpenXml.Spreadsheet.Sheet;
 using Column = DocumentFormat.OpenXml.Spreadsheet.Column;
 
-public class ExcelGenerator
+public class ExcelSpreadsheetGenerator
 {
+
+	public Stream FileToExcel(String path, IDataModel dataModel)
+	{
+		var wkbook = XamlServices.Load(path) as RepWorkbook
+			?? throw new NullReferenceException(path);
+		return WorkbookToExcel(wkbook, dataModel);
+	}
 	public Stream WorkbookToExcel(RepWorkbook book, IDataModel dataModel)
 	{
 		MemoryStream ms;

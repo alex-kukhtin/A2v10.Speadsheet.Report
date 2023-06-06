@@ -1,7 +1,7 @@
 ﻿using System;
 using System.Windows.Markup;
 
-namespace A2v10.Xaml.Speradsheet;
+namespace A2v10.Xaml.Spreadsheet;
 
 [ContentProperty("Sheets")]
 public class Workbook : XamlElement

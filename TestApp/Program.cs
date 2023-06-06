@@ -1,8 +1,8 @@
 ﻿// See https://aka.ms/new-console-template for more information
 
 using A2v10.Data;
-using A2v10.Speadsheet.Report;
-using A2v10.Xaml.Speradsheet;
+using A2v10.Spreadsheet.Report;
+using A2v10.Xaml.Spreadsheet;
 using System;
 using System.Diagnostics;
 using System.Dynamic;
@@ -49,7 +49,7 @@ internal static class Program
 		});
 		Console.WriteLine(dm);
 
-		var gen = new ExcelGenerator();
+		var gen = new ExcelSpreadsheetGenerator();
 		var ms = gen.WorkbookToExcel(wkbook, dm);
 
 		var outPath = "d:\\temp\\sample.xlsx";

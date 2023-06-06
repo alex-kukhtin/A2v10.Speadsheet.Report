@@ -1,4 +1,4 @@
-﻿<Workbook xmlns="clr-namespace:A2v10.Xaml.Speradsheet;assembly=A2v10.Xaml.Speradsheet">
+﻿<Workbook xmlns="clr-namespace:A2v10.Xaml.Spreadsheet;assembly=A2v10.Xaml.Spreadsheet">
 	<Sheet Name="Загальна">
 		<Sheet.Columns>
 			<Column Width="100"/>

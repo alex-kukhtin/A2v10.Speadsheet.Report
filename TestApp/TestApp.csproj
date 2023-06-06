@@ -10,8 +10,8 @@
 
 	<ItemGroup>
 		<ProjectReference Include="..\..\A2v10.Data\A2v10.Data\A2v10.Data.csproj" />
-		<ProjectReference Include="..\A2v10.Speadsheet.Report\A2v10.Speadsheet.Report.csproj" />
-		<ProjectReference Include="..\A2v10.Xaml.Speradsheet\A2v10.Xaml.Speradsheet.csproj" />
+		<ProjectReference Include="..\A2v10.Speadsheet.Report\A2v10.Spreadsheet.Report.csproj" />
+		<ProjectReference Include="..\A2v10.Xaml.Speradsheet\A2v10.Xaml.Spreadsheet.csproj" />
 	</ItemGroup>
 
 	<ItemGroup>

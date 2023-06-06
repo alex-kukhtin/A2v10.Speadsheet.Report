@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace A2v10.Xaml.Speradsheet;
+namespace A2v10.Xaml.Spreadsheet;
 
 public enum DataType
 {

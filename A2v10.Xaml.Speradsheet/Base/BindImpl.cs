@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Xaml;
 
-namespace A2v10.Xaml.Speradsheet;
+namespace A2v10.Xaml.Spreadsheet;
 
 public class BindImpl
 {
