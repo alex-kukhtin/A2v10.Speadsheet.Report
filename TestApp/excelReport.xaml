@@ -1,0 +1,57 @@
+﻿<Workbook xmlns="clr-namespace:A2v10.Xaml.Speradsheet;assembly=A2v10.Xaml.Speradsheet">
+	<Sheet Name="Загальна">
+		<Sheet.Columns>
+			<Column Width="100"/>
+			<Column Width="50"/>
+			<Column Width="50"/>
+			<Column Width="80"/>
+		</Sheet.Columns>
+		<Row />
+		<Row ItemsSource="{Bind Common}">
+			<Cell Content="{Bind Date}" DataType="Date" />
+			<Cell Content="{Bind DayType}" />
+			<Cell Content="{Bind Number}" DataType="Number"/>
+			<Cell Content="{Bind Number}" DataType="Currency" />
+		</Row>
+	</Sheet>
+	<Sheet Name="Група А">
+		<Row />
+		<Row ItemsSource="{Bind GroupA}">
+			<Cell Content="{Bind Date}" DataType="Date" />
+			<Cell Content="{Bind DayType}" />
+		</Row>
+	</Sheet>
+	<Sheet Name="Група Б">
+		<Row />
+		<Row ItemsSource="{Bind GroupB}">
+			<Cell Content="{Bind Date}" DataType="Date" />
+			<Cell Content="{Bind DayType}" />
+		</Row>
+	</Sheet>
+	<Sheet Name="В розрізі ОСР">
+		<Sheet.Sections>
+			<Section ItemsSource="{Bind OSR}">
+				<Row></Row>
+				<Row>
+					<Cell Content="{Bind Name}" />
+				</Row>
+				<Row>
+					<Cell />
+					<Cell />
+					<Cell>00:01</Cell>
+					<Cell>01:02</Cell>
+					<Cell>02:03</Cell>
+					<Cell DataType="String">4</Cell>
+					<Cell DataType="String">5</Cell>
+					<Cell>6</Cell>
+					<Cell>7</Cell>
+				</Row>
+				<Row ItemsSource="{Bind Values}">
+					<Cell Content="{Bind Date}" DataType="Date" />
+				</Row>
+			</Section>
+		</Sheet.Sections>
+	</Sheet>
+</Workbook>
+
+	

@@ -1,0 +1,27 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+	<PropertyGroup>
+		<OutputType>Exe</OutputType>
+		<TargetFramework>netframework4.8</TargetFramework>
+		<ImplicitUsings>disable</ImplicitUsings>
+		<LangVersion>10</LangVersion>
+		<Nullable>enable</Nullable>
+	</PropertyGroup>
+
+	<ItemGroup>
+		<ProjectReference Include="..\..\A2v10.Data\A2v10.Data\A2v10.Data.csproj" />
+		<ProjectReference Include="..\A2v10.Speadsheet.Report\A2v10.Speadsheet.Report.csproj" />
+		<ProjectReference Include="..\A2v10.Xaml.Speradsheet\A2v10.Xaml.Speradsheet.csproj" />
+	</ItemGroup>
+
+	<ItemGroup>
+		<Reference Include="System.Xaml" />
+	</ItemGroup>
+
+	<ItemGroup>
+	  <None Update="excelReport.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </None>
+	</ItemGroup>
+
+</Project>
